@@ -18,7 +18,7 @@ const Reservation = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/api/v1/reservation/send",
+        "https://restaurent-backend-zeta.vercel.app/api/v1/reservation/send",
         { firstName, lastName, email, phone, date, time },
         {
           headers: {
