@@ -15,6 +15,7 @@ app.use(
     credentials: true,
   })
 );
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -28,4 +29,8 @@ dbConnection();
 
 app.use(errorMiddleware);
 
-export default app;
+app.listen(process.env.PORT, ()=>{
+      console.log(`SERVER HAS STARTED AT PORT ${process.env.PORT}`);
+  })
+
+
